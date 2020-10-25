@@ -1,0 +1,14 @@
+package net.alex.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import net.alex.app.model.Noticia;
+
+@Repository
+public interface NoticiasRepository extends JpaRepository<Noticia, Integer> {
+
+	//metodo para encontrar por estatus
+	List<Noticia> findByEstatus(String estatus);
+	
+}

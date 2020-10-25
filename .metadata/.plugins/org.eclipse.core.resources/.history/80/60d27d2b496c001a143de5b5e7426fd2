@@ -1,0 +1,9 @@
+package net.alex.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import net.alex.app.model.Detalle;
+
+public interface DetallesRepository extends JpaRepository<Detalle, Integer> {
+
+}

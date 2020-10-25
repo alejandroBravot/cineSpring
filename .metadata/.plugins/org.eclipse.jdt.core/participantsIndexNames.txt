@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3673091724.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2282907617.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\24644979.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\899139589.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3732069326.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\127620007.index
+\cineapp\src\main\java
+C:\Users\raque\Documents\workspace\Curso Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3948250635.index
+\cineapp\src\main\java

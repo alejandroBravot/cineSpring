@@ -1,0 +1,5 @@
+package net.alex.app.service;
+
+public class PeliculasServiceJpa implements IPeliculasService{
+
+}

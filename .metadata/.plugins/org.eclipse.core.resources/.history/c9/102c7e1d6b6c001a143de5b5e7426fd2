@@ -1,0 +1,13 @@
+package net.alex.app.service;
+
+import net.alex.app.model.Detalle;
+
+public class DetalleServiceJpa implements IDetalleService {
+
+	@Override
+	public void insertar(Detalle detalle) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package net.alex.app.service;
+
+import java.util.List;
+
+import net.alex.app.model.Noticia;
+
+public class NoticiaServiceJpa implements INoticiasService {
+
+	@Override
+	public void guardar(Noticia noticia) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Noticia> buscarTodas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

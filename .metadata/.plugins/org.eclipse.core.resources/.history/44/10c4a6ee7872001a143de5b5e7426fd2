@@ -1,0 +1,11 @@
+package net.alex.app.service;
+
+import java.util.Date;
+import java.util.List;
+
+import net.alex.app.model.Horario;
+
+public interface IHorariosService {
+
+	List<Horario> buscarPorIDPelicula(int idPelicula, Date fecha);
+}

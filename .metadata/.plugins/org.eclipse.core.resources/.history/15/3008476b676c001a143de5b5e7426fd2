@@ -1,0 +1,33 @@
+package net.alex.app.service;
+
+import java.util.List;
+
+import net.alex.app.model.Pelicula;
+
+public class PeliculasServiceJpa implements IPeliculasService{
+
+	@Override
+	public List<Pelicula> buscarTodas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Pelicula buscarPorId(int idPelicula) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertar(Pelicula pelicula) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<String> buscarGeneros() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

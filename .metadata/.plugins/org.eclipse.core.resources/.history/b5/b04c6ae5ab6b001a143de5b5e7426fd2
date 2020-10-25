@@ -1,0 +1,12 @@
+package net.alex.app.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import net.alex.app.model.Noticia;
+
+@Repository
+public interface NoticiasRepository extends CrudRepository<Noticia, Integer> {
+
+	
+}

@@ -1,0 +1,7 @@
+package net.alex.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PeliculasRepository extends JpaRepository<Pelicula, Integer> {
+
+}

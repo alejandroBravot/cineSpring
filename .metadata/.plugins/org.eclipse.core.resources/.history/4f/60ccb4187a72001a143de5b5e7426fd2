@@ -1,0 +1,81 @@
+package net.alex.app.controller;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import net.alex.app.model.Horario;
+import net.alex.app.model.Pelicula;
+import net.alex.app.service.IHorariosService;
+import net.alex.app.service.IPeliculasService;
+import net.alex.app.util.Utileria;
+
+@Controller
+@RequestMapping(value="/horarios")
+public class HorariosController {
+		
+	@Autowired
+	IPeliculasService servicePeliculas;
+	
+	IHorariosService serviceHorario;
+	
+	/**
+	 * Metodo para mostrar el formulario para crear un nuevo horario
+	 * @return
+	 */
+	@GetMapping(value = "/create")
+	public String crear(Model model,@ModelAttribute Horario horario) {
+		
+		
+		model.addAttribute("peliculas", servicePeliculas.buscarTodas());
+		model.addAttribute("horario", horario);
+				
+		
+		return "horarios/formHorario";
+	}
+		
+	/**
+	 * Metodo para guardar el registro del Horario
+	 * @param horario
+	 * @param model
+	 * @return
+	 */
+	@PostMapping(value = "/save")
+	public String guardar(@ModelAttribute Horario horario, BindingResult result, Model model) {				
+		
+		if(result.hasErrors()) {
+			List<Pelicula> listaPeliculas = servicePeliculas.buscarTodas();
+			model.addAttribute("peliculas", listaPeliculas);
+			Utileria.obtenerErroresBinding(result);
+			return "horarios/formHorario";
+		}
+		
+		serviceHorario.insertar(horario);
+		attributes.addFlashAttribute("msg", "El horario fue guardado!");		
+		
+		return "redirect:/horarios/create";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+		
+
+	}
+	// Ejercicio: Crear metodo para personalizar el Data Binding para las todas las propiedades de tipo Date	
+	
+}

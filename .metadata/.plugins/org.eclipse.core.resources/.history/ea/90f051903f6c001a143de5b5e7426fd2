@@ -1,0 +1,19 @@
+package pruebasjpa;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import net.alex.app.repository.NoticiasRepository;
+import net.alex.app.repository.PeliculasRepository;
+
+public class AppPruebasRelaciones {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
+		NoticiasRepository repo = context.getBean("peliculasRepository", PeliculasRepository.class);
+		
+		
+		
+
+	}
+
+}

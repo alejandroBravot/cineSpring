@@ -1,0 +1,26 @@
+package pruebasjpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import net.alex.app.model.Noticia;
+import net.alex.app.repository.NoticiasRepository;
+
+public class AppCreate {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
+		
+		
+		Noticia noticia = new Noticia();
+		noticia.setTitulo("Proximo estreno: Dunkerke");
+		noticia.setDetalle("Proxima película de Nolan sobre la Sgunra Guerra Mundial");
+		//estatus y fecha no hace falta meterlos porque los creo en el constructor de Noticia.
+		
+		
+		NoticiasRepository repo = context.getBean("noticiasRepository", NoticiasRepository.class);
+		
+		context.close();
+	}
+
+}

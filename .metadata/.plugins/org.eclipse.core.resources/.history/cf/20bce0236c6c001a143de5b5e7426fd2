@@ -1,0 +1,18 @@
+package net.alex.app.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import net.alex.app.model.Detalle;
+import net.alex.app.repository.DetallesRepository;
+
+public class DetalleServiceJpa implements IDetalleService {
+	
+	@Autowired
+	DetallesRepository detalleRepo;
+
+	@Override
+	public void insertar(Detalle detalle) {
+		detalleRepo.save(detalle);
+	}
+
+}

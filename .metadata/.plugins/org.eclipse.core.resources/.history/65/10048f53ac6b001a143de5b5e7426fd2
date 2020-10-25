@@ -1,0 +1,27 @@
+package pruebasjpa;
+
+import java.util.List;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import net.alex.app.model.Noticia;
+import net.alex.app.repository.NoticiasRepository;
+
+public class AppJpaRepo {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
+		
+		NoticiasRepository repo =  context.getBean("noticiasRepository", NoticiasRepository.class);
+		
+		//lista de noticias
+//		List<Noticia> listaNoticias;
+//		listaNoticias = repo.findAll();
+//		listaNoticias.stream().forEach(not->System.out.println(not));
+		
+		//borrar todos los registros en lote
+		repo.deleteAllInBatch();
+
+	}
+
+}
